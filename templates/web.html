@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+</head>
+
+<body>
+    <div class=" container " style="text-align: center;">
+
+
+        {% include 'navbar.html' %}
+        <h1>
+            <it>welcome to my website</it>
+        </h1>
+
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="checkbox" name="check">
+            <button>Send</button>
+
+
+        </form>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facilis, tempore perspiciatis esse aperiam
+            obcaecati ducimus sint placeat voluptatum accusantium debitis ex sequi nihil nobis unde laboriosam soluta
+            fugiat quia incidunt dicta eveniet officia iure quod fuga. Cum sit ea voluptatem labore esse voluptates vel
+            inventore. Ducimus consectetur autem voluptatem?</p>
+
+        <button> content</button>
+        {% if isActive %}
+
+        <div>
+            <h1><mark>Today date is </mark>{{date}}</h1>
+            <h1>my name is :- {{name}}</h1>
+            <hr>
+
+            <h1>student name {{student_data.student_name}}</h1>
+            <h1>sudent college is :-{{student_data.student_college}}</h1>
+            <h1>sudent citye is :-{{student_data.student_city}}</h1>
+
+        </div>
+        {% endif %}
+
+
+        <hr>
+        <h1><mark>favorite Program</mark> </h1>
+        {% for p in list_of_program %}
+        <h3>{{p}}</h3>
+        {% endfor %}
+
+
+    </div>
+</body>
+
+</html>
